@@ -40,10 +40,25 @@
                         group = random.choice(ABC).getGroup(op.param1)
                         gMembMids = [contact.mid for contact in group.invitee]
                         for _mid in gMembMids:
-                            random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
-                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                    except:
-                        pass
+                        	for _mid not in Bots:
+                                random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
+                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                        except:
+                            pass
+                                                    
+
+        if op.type == 13: 
+            if op.param2 in wait["blacklist"]: 
+                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                    try:
+                        group = random.choice(ABC).getGroup(op.param1)
+                        gMembMids = [contact.mid for contact in group.invitee]
+                        for _mid in gMembMids:
+                        	for _mid not in Bots:
+                                random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
+                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                        except:
+                            pass
                         
         if op.type == 19:
             if mid in op.param3:

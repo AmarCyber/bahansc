@@ -40,7 +40,7 @@
                         group = random.choice(ABC).getGroup(op.param1)
                         gMembMids = [contact.mid for contact in group.invitee]
                         for _mid in gMembMids:
-                        	for _mid not in Bots:
+                        	if _mid not in Bots:
                                 random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
                                 random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         except:
@@ -54,7 +54,7 @@
                         group = random.choice(ABC).getGroup(op.param1)
                         gMembMids = [contact.mid for contact in group.invitee]
                         for _mid in gMembMids:
-                        	for _mid not in Bots:
+                        	if _mid not in Bots:
                                 random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
                                 random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         except:

@@ -132,7 +132,7 @@
                                                         cl.acceptGroupInvitation(op.param1)
                                                     except:
                                                         try:
-                                                            kj.acceptGroupInvitationByTicket(op.param1,Ticket)       
+                                                            kj.acceptGroupInvitation(op.param1)       
                                                             G = kj.getGroup(op.param1)
                                                             G.preventedJoinByTicket = False   
                                                             kj.inviteIntoGroup(op.param1,[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid])     
